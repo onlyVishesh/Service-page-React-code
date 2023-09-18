@@ -1,14 +1,14 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Home from "./components/Home";
+import Service from "./components/Service";
 
 function App() {
     return (
         <div className="App">
             <Navbar />
             {/* Added your components between here*/}
-            <Home />
+            <Service />
             <Footer />
         </div>
     );
