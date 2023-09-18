@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./Navbar.css"
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -33,7 +34,7 @@ const Navbar = () => {
             <div id="navbar" style={{ height: isScrolled ? '3.4vw' : '4vw' }}>
                 <div id="logo">
                     <a href="/">
-                        <img src="images/ambu logo.webp" alt="ambuvians Logo" id="logo1" style={{ height: isScrolled ? '3.8vw' : '4.5vw' }} />
+                        <img src="images/Navbar-images/ambu logo.webp" alt="ambuvians Logo" id="logo1" style={{ height: isScrolled ? '3.8vw' : '4.5vw' }} />
                     </a>
                 </div>
                 <div className="right-header">
@@ -45,16 +46,9 @@ const Navbar = () => {
                             <li>
                                 <a href="/">ABOUT</a>
                             </li>
-                            <li>
-                                <a
+                            <li >
+                                <a className='under'
                                     href="/"
-                                    style={{
-                                        padding: "5px",
-                                        background: "linear-gradient(90deg, /0092ee 0%, /0c65ba 50%, /203381 100%)",
-                                        backgroundRepeat: "no-repeat",
-                                        backgroundSize: "50% 4px",
-                                        backgroundPosition: "bottom",
-                                    }}
                                 >
                                     SERVICES
                                 </a>
@@ -80,7 +74,7 @@ const Navbar = () => {
                         </div>
                         <div className="right-header-element">
                             <abbr title="Pic">
-                                <img className="pic" src="images/unnamed.webp" alt="Profile" />
+                                <img className="pic" src="images/Navbar-images/unnamed.webp" alt="Profile" />
                             </abbr>
                         </div>
                         <div className="toggle_btn" onClick={toggleMenu}>

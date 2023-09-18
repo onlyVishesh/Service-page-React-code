@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import "./Quotes.css"
+
 
 const quotes = [
   "Future holds transformative services and technologies that will reshape the world.",

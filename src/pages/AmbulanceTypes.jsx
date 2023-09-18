@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import "./AmbulanceTypes.css"
 
 const AmbulanceTypes = () => {
   const [ambulanceList, setAmbulanceList] = useState([
     {
       id: 1,
       name: 'ALS',
-      fullName: 'Advance Life Support',
-      detail: 'Large vehicle <br> Advance Life Support is used for critical patients',
+      fullName: 'Advanced Life Support',
+      detail: 'It have cardiac life support, cardiac monitors as well as a glucose-testing device.',
       features: [
         ['Defibrillator', 'More Details Coming Soon...'],
         ['Medicines', 'More Details Coming Soon...'],
@@ -20,7 +21,7 @@ const AmbulanceTypes = () => {
       id: 2,
       name: 'BLS',
       fullName: 'Basic Life Support',
-      detail: 'Basic vehicle <br> Basic Life Support is used to provide Basic support',
+      detail: 'It is used for patients with life-threatening illnesses or injuries until they can be given full medical care by advanced life support providers (paramedics, nurses, physicians).',
       features: [
         ['Medicines', 'More Details Coming Soon...'],
         ['Stretcher', 'More Details Coming Soon...'],
@@ -34,7 +35,7 @@ const AmbulanceTypes = () => {
       id: 3,
       name: 'PTS',
       fullName: 'Patient Transport Service',
-      detail: 'Medium vehicle <br> Patient Transport Service is used for transporting patients',
+      detail: 'It is a non-emergency vehicle that transfers patients to and from hospitals.',
       features: [
         ['Stretcher', 'More Details Coming Soon...'],
         ['Nurse', 'More Details Coming Soon...'],
@@ -47,8 +48,8 @@ const AmbulanceTypes = () => {
     {
       id: 4,
       name: 'MA',
-      fullName: 'Medium vehicle',
-      detail: 'Medium vehicle <br> MA is used for transporting patients',
+      fullName: 'Medium Ambulance',
+      detail: 'It provides ample room for storage, and more capacity for transporting patients and larger response crew.',
       features: [
         ['Nurse', 'More Details Coming Soon...'],
         ['Bandages', 'More Details Coming Soon...'],
@@ -91,7 +92,7 @@ const AmbulanceTypes = () => {
               <abbr title={ambulance.name}>
                 <img
                   loading="lazy"
-                  src={`images/ambulance/${ambulance.name}.webp`}
+                  src={`images/Service-images/ambulance/${ambulance.name}.webp`}
                   alt={`${ambulance.name} Ambulance image`}
                   className={`ambulance-img ${ambulance.name}-ambulance-img`}
                 />
@@ -111,7 +112,7 @@ const AmbulanceTypes = () => {
               <figure className="selected-ambulance-outer-figure">
                 <img
                   loading="lazy"
-                  src={`images/ambulance/${selectedAmbulance.name}.webp`}
+                  src={`images/Service-images/ambulance/${selectedAmbulance.name}.webp`}
                   alt={selectedAmbulance.name}
                   className="selected-ambulance-outer-img"
                 />
@@ -119,7 +120,7 @@ const AmbulanceTypes = () => {
               <figure className="selected-ambulance-inner-figure">
                 <img
                   loading="lazy"
-                  src={`images/ambulance/inner-${selectedAmbulance.name}.webp`}
+                  src={`images/Service-images/ambulance/inner-${selectedAmbulance.name}.webp`}
                   alt={`${selectedAmbulance.name} interior`}
                   className="selected-ambulance-inner-img"
                 />
@@ -144,7 +145,7 @@ const AmbulanceTypes = () => {
                     <div className="flip-card-front">
                       <img
                         loading="lazy"
-                        src={`images/ambulance/features/${selectedAmbulance.name}/FEATURES ${
+                        src={`images/Service-images/ambulance/features/${selectedAmbulance.name}/FEATURES ${
                           index + 1
                         }.webp`}
                         alt={feature[0]}

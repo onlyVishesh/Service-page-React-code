@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-// import "./Section5.css";
+import "./CustomerSupport.css";
 
 
 
-const Section5 = () => {
+const CustomerSupport = () => {
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -34,7 +34,7 @@ const Section5 = () => {
             <div className="customer-support-div animation-group-2">
                 {/* Faster Than Ever */}
                 <figure className="customer-support-figure" style={{ position: 'absolute', left: '5%', top: '10%' }} data-animation="fadeInUp">
-                    <img loading="lazy" src="./images/CUSTOMER SUPPORT FASTER THAN EVER  .webp" alt="FASTER THAN EVER" className="customer-support-img animates" />
+                    <img loading="lazy" src="./images/Service-images/CUSTOMER SUPPORT FASTER THAN EVER  .webp" alt="FASTER THAN EVER" className="customer-support-img animates" />
                     <figcaption className="customer-support-figcaption">
                         FASTER THAN EVER
                     </figcaption>
@@ -42,7 +42,7 @@ const Section5 = () => {
 
                 {/* Lingual Diversity */}
                 <figure className="customer-support-figure" style={{ position: 'absolute', left: '80%', top: '10%' }} data-animation="fadeInUp">
-                    <img loading="lazy" src="./images/CUSTOMER SUPPORT LANGUAGE .webp" alt="LINGUAL DIVERSITY" className="customer-support-img animates" />
+                    <img loading="lazy" src="./images/Service-images/CUSTOMER SUPPORT LANGUAGE .webp" alt="LINGUAL DIVERSITY" className="customer-support-img animates" />
                     <figcaption className="customer-support-figcaption">
                         LINGUAL DIVERSITY
                     </figcaption>
@@ -50,7 +50,7 @@ const Section5 = () => {
 
                 {/* Toll Free Number */}
                 <figure className="customer-support-figure" style={{ position: 'absolute', left: '42.5%', top: '40%' }} data-animation="fadeInUp">
-                    <img loading="lazy" src="./images/CUSTOMER SUPPORT TOLL FREE.webp" alt="TOLL FREE NUMBER" className="customer-support-img animates" />
+                    <img loading="lazy" src="./images/Service-images/CUSTOMER SUPPORT TOLL FREE.webp" alt="TOLL FREE NUMBER" className="customer-support-img animates" />
                     <figcaption className="customer-support-figcaption">
                         TOLL FREE NUMBER
                     </figcaption>
@@ -58,7 +58,7 @@ const Section5 = () => {
 
                 {/* Choose the Right One */}
                 <figure className="customer-support-figure" style={{ position: 'absolute', left: '5%', top: '70%' }} data-animation="fadeInUp">
-                    <img loading="lazy" src="./images/CUSTOMER SUPPORT CHOOSE THE RIGHT ONE .webp" alt="CHOOSE THE RIGHT ONE" className="customer-support-img animates" />
+                    <img loading="lazy" src="./images/Service-images/CUSTOMER SUPPORT CHOOSE THE RIGHT ONE .webp" alt="CHOOSE THE RIGHT ONE" className="customer-support-img animates" />
                     <figcaption className="customer-support-figcaption">
                         CHOOSE THE RIGHT ONE
                     </figcaption>
@@ -66,7 +66,7 @@ const Section5 = () => {
 
                 {/* Cheapest Price */}
                 <figure className="customer-support-figure" style={{ position: 'absolute', left: '80%', top: '70%' }} data-animation="fadeInUp">
-                    <img loading="lazy" src="./images/CUSTOMER SUPPORT CHEAPER PRICE .webp" alt="Cheaper Price" className="customer-support-img animates" />
+                    <img loading="lazy" src="./images/Service-images/CUSTOMER SUPPORT CHEAPER PRICE .webp" alt="Cheaper Price" className="customer-support-img animates" />
                     <figcaption className="customer-support-figcaption" align="bottom">
                         CHEAPEST PRICE
                     </figcaption>
@@ -76,4 +76,4 @@ const Section5 = () => {
     );
 };
 
-export default Section5;
+export default CustomerSupport;

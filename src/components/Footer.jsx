@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
+import "./Footer.css"
 
 function Footer() {
   const [showForm, setShowForm] = useState(false);
 
+  const hideForm = ()=> {document.querySelector(".form-close-btn").addEventListener("click", () => {
+    document.querySelector(".form").style.display = "none";
+  });}
   const handleContactUsClick = () => {
     setShowForm(true);
+    document.querySelector(".form").style.display = "block";
+
   };
+
 
   const handleSubmit = () => {
     // Your submission logic here
@@ -14,7 +21,7 @@ function Footer() {
     document.querySelector(".form").innerHTML = `
       <div class="form-item" data-animation="fadeOff">
         <div>
-          <figure><img loading="lazy" src="/images/ambu logo.webp" alt="ambu logo" class="form-logo"></figure>
+          <figure><img loading="lazy" src="/images/Footer-images/ambu logo.webp" alt="ambu logo" class="form-logo"></figure>
         </div>
         <div>
           <h1>Thank You</h1>
@@ -40,7 +47,7 @@ function Footer() {
   return (
     <div className="footer box">
       <div style={{ fontSize: '1.5vw', margin: '1vw', alignItems: 'center' }} className="footer-title">
-        <img loading="lazy" src="images/indian-map.svg" alt="India map" style={{ width: '4vw' }} />
+        <img loading="lazy" src="images/Footer-images/indian-map.svg" alt="India map" style={{ width: '4vw' }} />
         <h1>&nbsp; India's First Unified Health Care Software</h1>
       </div>
 
@@ -87,7 +94,7 @@ function Footer() {
           <ul style={{ maxWidth: '400px' }}>
             {/* Contact Info */}
             <li style={{ display: 'flex', alignItems: 'center' }}>
-              <div><abbr title="Location"><img loading="lazy" src="images/location icon.webp" alt="" style={{ width: '3.5vw', marginRight: '1.5vw' }} /></abbr></div>
+              <div><abbr title="Location"><img loading="lazy" src="images/Footer-images/location icon.webp" alt="location" style={{ width: '3.5vw', marginRight: '1.5vw' }} /></abbr></div>
               <div style={{ fontSize: '1.2vw' }}>
                 <a href="https://goo.gl/maps/Y2Eoynbw8ZAyd8NJ6">
                   <abbr title="XYZ ABC Technology Business Incubation Utter Pradesh India">
@@ -101,19 +108,22 @@ function Footer() {
 
             {/* Email */}
             <li style={{ display: 'flex', alignItems: 'center' }}>
-              <div><abbr title="Mail"><img loading="lazy" src="images/gmail.svg" alt="" style={{ width: '3.5vw', marginRight: '1.5vw' }} /></abbr></div>
-              <div style={{ fontSize: '1.2vw' }}>
+              <div><abbr title="Mail"><img loading="lazy" src="images/Footer-images/gmail.svg" alt="Mail" style={{ width: '3.5vw', marginRight: '1.5vw' }} /></abbr></div>
+              <div style={{ fontSize: '1.2vw', alignItems:"baseline" }}>
                 <a href="mailto:official.ambuvians@gmail.com">
                   <abbr title="official.ambuvians@gmail.com">official.ambuvians@gmail.com</abbr>
+                </a>
+                <a href="mailto:no-reply@ambuvians.in">
+                  <abbr title="no-reply@ambuvians.in"> no-reply@ambuvians.in </abbr>
                 </a>
               </div>
             </li>
 
             {/* Phone Numbers */}
             <li style={{ display: 'flex', alignItems: 'center', marginBottom: '1vw' }}>
-              <div><abbr title="Phone No."><img loading="lazy" src="images/icon_phone.webp" alt="" style={{ width: '3vw', marginRight: '1.5vw' }} /></abbr></div>
+              <div><abbr title="Phone No."><img loading="lazy" src="images/Footer-images/icon_phone.webp" alt="Call" style={{ width: '3vw', marginRight: '1.5vw' }} /></abbr></div>
               <div style={{ fontSize: '1.2vw' }}>
-                <a href="tel:+917505853812"><abbr title="7505853812">7505853812</abbr></a><br />
+                <a href="tel:+917505853812"><abbr title="7505853812">7505853812</abbr></a>
                 <a href="tel:+918630729931"><abbr title="8630729931">8630729931</abbr></a>
               </div>
             </li>
@@ -128,20 +138,20 @@ function Footer() {
           {/* Instagram */}
           <abbr title="instagram" className="first-icon">
             <a href="https://www.instagram.com/official.ambuvians/" target="_blank">
-              <img loading="lazy" src="images/Footer-images/instagram.webp" alt="" />
+              <img loading="lazy" src="images/Footer-images/instagram.webp" alt="Instagram" />
             </a>
           </abbr>
 
           {/* WhatsApp */}
           <abbr title="whatsapp" className="second-icon">
             <a href="https://wa.me/+7505853812" target="_blank">
-              <img loading="lazy" src="images/Footer-images/whatsapp.webp" alt="" />
+              <img loading="lazy" src="images/Footer-images/whatsapp.webp" alt="Whatsapp" />
             </a>
           </abbr>
 
           {/* Twitter */}
           <abbr title="twitter" className="third-icon">
-            <a href="/">
+            <a href="https://www.threads.net/@official.ambuvians" target="_blank">
               <img loading="lazy" src="images/Footer-images/threads.webp" alt="Threads" />
             </a>
           </abbr>
@@ -179,7 +189,10 @@ function Footer() {
       </div>
 
       <div className="form" style={{ display: showForm ? 'block' : 'none' }} data-animation="fade">
-        <h1>Query Form</h1><br />
+      <div class="form-close-btn">
+      <i class="fa-solid fa-xmark" onClick={hideForm}></i>
+    </div>
+        <h1 className='form-title'>Query Form</h1>
         <div className="form-item">
           <input type="text" placeholder="Enter Name" className="form-input" />
           <input type="text" placeholder="Enter Email-id/Phone No" className="form-input" />
