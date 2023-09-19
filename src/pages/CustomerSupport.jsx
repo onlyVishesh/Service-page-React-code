@@ -21,7 +21,7 @@ const CustomerSupport = () => {
         animatedEls.forEach((el) => observer.observe(el));
     }, []);
        const sectionStyle = {
-        backgroundImage: `url('./images/CUSTOMER SUPPORT BACKGROUND.webp')`,
+        backgroundImage: `url('./images/Service-images/CUSTOMER SUPPORT BACKGROUND.webp')`,
         backgroundSize: 'cover', // Adjust as needed
         backgroundRepeat: 'no-repeat', // Adjust as needed
         // Add any other background-related styles here
